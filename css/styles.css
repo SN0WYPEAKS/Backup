@@ -1,0 +1,214 @@
+/* body settings start */
+body {
+  background-color: gray;
+  padding: 20px;
+  margin: 75px;
+}
+/* body settings end */
+
+/* navbar start */
+.navbar {
+  height: 68px;
+}
+/* navbar end */
+
+/* navbar dropdown menu buttons start */
+#nav-menu-togglers {
+  height: 68px;
+  margin-top: -5px;
+}
+
+.dropdown-toggle {
+  border-radius: 90px;
+  background-color: rgba(255, 255, 255, 0.00);
+  border: none;
+  font-size: 0px;
+  height: 50px;
+  width: 50px;
+  margin-top: -10px;
+}
+
+.dropdown-toggle:hover {
+  background-color: black;
+  transition: 0.5s;
+}
+
+.dropdown-toggle:focus {
+  background-color: black;
+  border: 1px solid white;
+}
+/* navbar dropdown menu buttons end */
+
+/* hamburger menu offcanvas button start */ 
+#offcanvasDarkNavbar {
+  width: 350px;
+  padding: 5px;
+}
+
+.navbar-toggler {
+  font-size: 15px;
+  border: none;
+  margin-top: -10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 90px;
+  box-shadow: none;
+}
+
+.navbar-toggler:hover{
+  background-color: black;
+  transition: 0.5s;
+  box-shadow: none;
+}
+
+.navbar-toggler:focus {
+  background-color: black;
+  border: 1px solid white;
+  color: transparent;
+  box-shadow: none;
+}
+/* hamburger menu end */
+
+
+/* offcanvas close button start */
+.offcanvas-header .btn-close {
+  padding: 20px;
+  width: 15px;
+  height: 15px;
+  margin-top: -25px;
+  margin-right: -20px;
+}
+
+
+.btn-close:hover {
+  background-color: red;
+  border-radius: 0px;
+  --bs-btn-close-white-filter: invert(1) grayscale(-50%) brightness(200%);
+  transition: 0.15s;
+}
+
+.btn-close:focus {
+  box-shadow: none;
+}
+
+.btn-close:active {
+  box-shadow: none;
+}
+/* offcanvas close button end */
+
+/* navbar dropdown menu items start */
+ul li {
+  border-bottom: 1px solid gray;
+  width: 150px;
+  margin: auto;
+  padding: 5px;
+}
+
+.dropdown-menu {
+  background-color: silver;
+  border: 2px solid black;
+  width: 200px;
+  padding: 5px;
+}
+
+#offcanvas-search-bar {
+  border: none;
+  border-radius: 0%;
+  height: 50px;
+  border-bottom: 0.5px solid gray;
+  background-color: rgba(255, 255, 255, 0.00);
+  color: white;
+}
+/* navbar dropdown items end */
+
+/* offcanvas search bar start */
+#offcanvas-search-bar:hover {
+  background-color: black;
+  border: 1px solid gray;
+  transition: 0.5s;
+}
+
+#offcanvas-search-bar:focus {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  box-shadow: none;
+  transition: 0.5s;
+}
+
+#offcanvas-search-button {
+  border-radius: 0%;
+  height: 50px;
+  width: 50px;
+  font-size: 18px;
+  border: none;
+  color: gray;
+}
+
+#offcanvas-search-button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  transition: 0.5s;
+}
+
+.form-control::placeholder {
+  color: gray;
+}
+/*offcanvas search bar end */
+
+/* navbar search bar start */
+#navbar-bar-toggle {
+  display: block;
+  border-radius: 90px;
+  margin-left: 1730px;
+  margin-top: -12px;
+  width: 50px;
+  height: 50px;
+  text-indent: 40px;
+  border: none;
+  cursor: pointer;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='white' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+  position: absolute;
+}
+
+#navbar-bar-toggle:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+#navbar-bar-toggle:focus {
+  width: 500px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  transition: 0.5s;
+  right: 180px;
+  background-color: white;
+  cursor: auto;
+  background: white;
+  border: 1px solid black;
+  box-shadow: none;
+}
+/* navbar search bar end */
+
+/* navbar search bar search button start */
+#search-button {
+  background-color: gray;
+  border-top-right-radius: 90px;
+  border-bottom-right-radius: 90px;
+  transition: 0.5s;
+  font-size: 15px;
+  height: 50px;
+  width: 50px;
+  top: -10px;
+  right: 0px;
+  border: 1px solid black;
+  position: absolute;
+}
+
+#search-button:hover {
+  background-color: black;
+  border: 1px solid white;
+}
+/* navbar search bar search button end */
+
