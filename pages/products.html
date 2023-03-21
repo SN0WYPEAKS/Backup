@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="../css/styles.css">
     </head>
 
-    <body>
+    <body id="body">
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
@@ -68,7 +68,7 @@
               <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Products</h5>
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" id="close-button"></button>
                 </div>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" id="offcanvas-search-bar">
@@ -95,7 +95,7 @@
         </header>
 
         <div id="product-filter">
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" id="filter-button">
+            <button onclick="filterMove()" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" id="filter-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sliders" viewBox="0 0 16 16" id="filter-sliders">
                     <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"/>
                 </svg> Filter
@@ -104,14 +104,19 @@
             <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel" id="filter-menu">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button onclick="moveBack()" type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close" id="close-filter close-button"></button>
                 </div>
                 <div class="offcanvas-body">
                     <p>Try scrolling the rest of the page to see this option in action.</p>
                 </div>
             </div>
-            <form>
-                <input type="text" class="form-control" placeholder="search" id="filter-search">
+            <form class="d-flex" role="search" id="filter-search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="filter-search-bar">
+                <button class="btn btn-outline-success" type="submit" id="filter-search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
             </form>
             <div class="btn-group" id="action-drop">
                 <button type="button" class="btn btn-secondary" data-bs-toggle="dropdown" aria-expanded="false" id="action-button">
@@ -138,26 +143,26 @@
 
         <table>
             <tbody>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
-                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="2" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="3" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="4" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="5" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="6" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="7" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="8" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="9" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="10" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="11" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="12" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="13" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="14" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="15" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="16" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="17" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="18" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="19" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
+                <tr><td><div class="form-check"><input class="form-check-input" type="checkbox" value="20" id="flexCheckDefault"><label class="form-check-label" for="flexCheckDefault">Default checkbox</label></div></td></tr>
             </tbody>
         </table>
 
